@@ -3,7 +3,7 @@
 ## Installation
 
 1. Make sure you have [NPM and Node](https://docs.npmjs.com/getting-started/installing-node) installed on your system.
-2. If you have Git on your terminal, type `git clone https://github.com/onitsoft/nexchange-open-client-react.git`.
+2. If you have Git on your terminal, type `git clone https://github.com/Srikanththyagarajan/NasdaqExchange`.
 3. Then go to repository by typing `cd nasdaqExchange`.
 4. Install NPM dependencies `npm install`.
 5. Start the project `npm start`.
