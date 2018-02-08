@@ -1,0 +1,198 @@
+@font-face {
+  font-family: "cryptocoins";
+  src: url('../fonts/cryptocoins/cryptocoins.woff2') format('woff2'),
+    url('../fonts/cryptocoins/cryptocoins.woff') format('woff'),
+    url('../fonts/cryptocoins/cryptocoins.ttf') format('truetype');
+}
+
+/* .cc:before { */
+[class*="cc-"]::before {
+  font-family: "cryptocoins";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  /* speak: none; only necessary if not using the private unicode range (firstGlyph option) */
+  text-decoration: none;
+  text-transform: none;
+}
+
+.cc-ETH-alt:before {
+  content: "\E046";
+}
+
+.cc-ETH:before {
+  content: "\E047";
+}
+
+.cc-BTC-alt:before {
+  content: "\E024";
+}
+
+.cc-BTC:before {
+  content: "\E025";
+}
+
+.cc-DOGE-alt:before {
+  content: "\E03C";
+}
+
+.cc-DOGE:before {
+  content: "\E03D";
+}
+
+.cc-LTC-alt:before {
+  content: "\E07C";
+}
+
+.cc-LTC:before {
+  content: "\E07D";
+}
+
+.cc-BCH-alt::before {
+  content: "\E017";
+}
+
+.cc-BCH::before {
+  content: "\E018";
+}
+
+.cc-EOS-alt::before {
+  content: "\E040";
+}
+
+.cc-EOS::before {
+  content: "\E041";
+}
+
+.cc-XVG-alt:before {
+  content: "\E075";
+  background-image: url(../img/logos/xvg.png); background-position: 50% 50%; background-size: contain; background-repeat: no-repeat;
+  color: transparent;
+}
+
+.cc-XVG:before {
+  content: "\E075";
+  background-image: url(../img/logos/xvg.png); background-position: 50% 50%; background-size: contain; background-repeat: no-repeat;
+  color: transparent;
+}
+
+.cc-XRB-alt:before {
+  content: "\E075";
+  background-image: url(../img/logos/xrb.png); background-position: 50% 50%; background-size: contain; background-repeat: no-repeat;
+  color: transparent;
+}
+
+.cc-XRB:before {
+  content: "\E075";
+  background-image: url(../img/logos/xrb.png); background-position: 50% 50%; background-size: contain; background-repeat: no-repeat;
+  color: transparent;
+}
+
+.cc-BDG-alt:before {
+  content: "\E075";
+  background-image: url(../img/logos/bdg.png); background-position: 50% 50%; background-size: contain; background-repeat: no-repeat;
+  color: transparent;
+}
+
+.cc-BDG:before {
+  content: "\E075";
+  background-image: url(../img/logos/bdg.png); background-position: 50% 50%; background-size: contain; background-repeat: no-repeat;
+  color: transparent;
+}
+
+.cc-USD-alt:before {
+  content: "\E075";
+  background-image: url(../img/logos/usd.png); background-position: 50% 50%; background-size: contain; background-repeat: no-repeat;
+  color: transparent;
+}
+
+.cc-USD:before {
+  content: "\E075";
+  background-image: url(../img/logos/usd.png); background-position: 50% 50%; background-size: contain; background-repeat: no-repeat;
+  color: transparent;
+}
+
+.cc-EUR-alt:before {
+  content: "\E075";
+  background-image: url(../img/logos/eur.png); background-position: 50% 50%; background-size: contain; background-repeat: no-repeat;
+  color: transparent;
+}
+
+.cc-EUR:before {
+  content: "\E075";
+  background-image: url(../img/logos/eur.png); background-position: 50% 50%; background-size: contain; background-repeat: no-repeat;
+  color: transparent;
+}
+
+.selectedCoin .cc-XVG-alt:before {
+  content: "\E075";
+  background-image: url(../img/logos/xvg-white.png); background-position: 50% 50%; background-size: contain; background-repeat: no-repeat;
+  color: transparent;
+}
+
+.selectedCoin .cc-XVG:before {
+  content: "\E075";
+  background-image: url(../img/logos/xvg-white.png); background-position: 50% 50%; background-size: contain; background-repeat: no-repeat;
+  color: transparent;
+}
+
+.selectedCoin .cc-XRB-alt:before {
+  content: "\E075";
+  background-image: url(../img/logos/xrb-white.png); background-position: 50% 50%; background-size: contain; background-repeat: no-repeat;
+  color: transparent;
+}
+
+.selectedCoin .cc-XRB:before {
+  content: "\E075";
+  background-image: url(../img/logos/xrb-white.png); background-position: 50% 50%; background-size: contain; background-repeat: no-repeat;
+  color: transparent;
+}
+
+.selectedCoin .cc-BDG-alt:before {
+  content: "\E075";
+  background-image: url(../img/logos/bdg-white.png); background-position: 50% 50%; background-size: contain; background-repeat: no-repeat;
+  color: transparent;
+}
+
+.selectedCoin .cc-BDG:before {
+  content: "\E075";
+  background-image: url(../img/logos/bdg-white.png); background-position: 50% 50%; background-size: contain; background-repeat: no-repeat;
+  color: transparent;
+}
+
+.selectedCoin .cc-USD-alt:before {
+  content: "\E075";
+  background-image: url(../img/logos/usd-white.png); background-position: 50% 50%; background-size: contain; background-repeat: no-repeat;
+  color: transparent;
+}
+
+.selectedCoin .cc-USD:before {
+  content: "\E075";
+  background-image: url(../img/logos/usd-white.png); background-position: 50% 50%; background-size: contain; background-repeat: no-repeat;
+  color: transparent;
+}
+
+.selectedCoin .cc-EUR-alt:before {
+  content: "\E075";
+  background-image: url(../img/logos/eur-white.png); background-position: 50% 50%; background-size: contain; background-repeat: no-repeat;
+  color: transparent;
+}
+
+.selectedCoin .cc-EUR:before {
+  content: "\E075";
+  background-image: url(../img/logos/eur-white.png); background-position: 50% 50%; background-size: contain; background-repeat: no-repeat;
+  color: transparent;
+}
+
+.BTC, .BCH { color: #F7931A; }
+.LTC { color: #838383; }
+.ETH { color: #282828; }
+.DOGE { color: #BA9F33; }
+.XVG { color: #42AFB2; }
+.EOS { color: #19191A; }
+.XRB { color: #0070ff; }
+.BDG { color: #471d66; }
+.USD { color: #34b67a; }
+.EUR { color: #5fccff; }
