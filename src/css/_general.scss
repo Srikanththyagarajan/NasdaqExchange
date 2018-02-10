@@ -27,10 +27,7 @@ textarea.form-control:focus { outline: none; border-color: none; box-shadow: non
 
 .btn-themed {
 	&, &:focus, &:visited {
-		background: $blue;
-		background: -moz-linear-gradient(to bottom, $blue 0, $nasdaqBlue 100%);
-		background: -webkit-linear-gradient(to bottom, $blue 0, $nasdaqBlue 100%);
-		background: linear-gradient(to bottom, $blue 0, $nasdaqBlue 100%);
+		background: $nasdaqBlue;
 	}
 }
 

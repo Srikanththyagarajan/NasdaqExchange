@@ -20,7 +20,6 @@ import Loadable from 'react-loadable';
 import LoadingComponent from './components/LoadingComponent';
 import Referrals from './components/Referrals';
 import Header from './components/Header';
-import Footer from './components/Footer';
 
 import Home from './containers/Home';
 import Order from './containers/order/Order';
@@ -45,6 +44,7 @@ ReactDOM.render(
 	  			<Route exact path="/" component={Home} />
           <Route component={AsyncNotFound} />
 	  		</Switch>
+				<footer></footer>
   		</div>
   	</BrowserRouter>
   </Provider>

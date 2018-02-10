@@ -15,7 +15,6 @@ import OrderExpired from './OrderExpired';
 import Bookmark from '../Bookmark';
 import NotFound from '../../components/NotFound';
 import CoinProcessed from './CoinProcessed';
-import ReferralBox from '../../containers/ReferralBox';
 
 import STATUS_CODES from '../../statusCodes';
 
@@ -172,7 +171,7 @@ class Order extends Component {
 					    	</div>
 					    </div>
 
-					    {this.state.order ? <ReferralBox order={this.state.order} /> : null }
+					    {/* {this.state.order ? <ReferralBox order={this.state.order} /> : null } */}
 					</div>
 				</div>
 

@@ -7,11 +7,8 @@ import { fetchCoinDetails, fetchPairs, fetchPrice } from '../actions';
 
 import Hero from '../components/Hero';
 import About from '../components/About';
-//import Testimonials from '../components/Testimonials';
 import RecentOrders from '../containers/RecentOrders';
-import SubscriptionForm from '../components/SubscriptionForm';
 import PriceComparison from '../containers/PriceComparison';
-import Trustpilot from '../components/Trustpilot';
 
 
 class Home extends Component {
@@ -41,11 +38,10 @@ class Home extends Component {
 		return (
 		  <div>
 		    <Hero />
-
 		    <RecentOrders />
 		    <PriceComparison />
 		    <About />
-		  </div>
+			</div>
 		);
 	}
 }

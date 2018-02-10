@@ -10,7 +10,7 @@ class PriceComparison extends Component {
         super(props);
 
         this.state = {
-            nexchange: {},
+            NasdaqExchange: {},
             changelly: {},
             shapeshift: {},
 
@@ -37,10 +37,10 @@ class PriceComparison extends Component {
         }
     }
 
-    showBestRate(shapeshiftRate, changellyRate, nexchangeRate) {
-        let rates = [shapeshiftRate, changellyRate, nexchangeRate],
+    showBestRate(shapeshiftRate, changellyRate, NasdaqExchangeRate) {
+        let rates = [shapeshiftRate, changellyRate, NasdaqExchangeRate],
             min = Math.max.apply(null, rates),
-            info = ['shapeshift', 'changelly', 'nexchange2'];
+            info = ['shapeshift', 'changelly', 'NasdaqExchange2'];
 
         let max = 0,
             idx = null;
@@ -65,7 +65,7 @@ class PriceComparison extends Component {
         ])
         .then(axios.spread((btceth, btcltc, dogebtc, ethltc, dogeeth, dogeltc) => {
             this.setState({
-                nexchange: {
+                NasdaqExchange: {
                     btceth: (1 / parseFloat(btceth.data[0].ticker.ask)).toFixed(4),
                     btcltc: (1 / parseFloat(btcltc.data[0].ticker.ask)).toFixed(4),
                     dogebtc: (1 / parseFloat(dogebtc.data[0].ticker.ask)).toFixed(1),
@@ -148,59 +148,52 @@ class PriceComparison extends Component {
                                     <thead>
                                         <tr>
                                             <th className="text-center"></th>
-                                            <th><img className="nexchange-logo" src="/img/prices/nexchange2.png" alt="Nexchange" /></th>
-                                            <th><img src="/img/prices/shapeshift.png" alt="Shapeshift" /></th>
-                                            <th><img src="/img/prices/changelly.png" alt="Changelly" /></th>
+                                            <th>Rate 1</th>
+                                            <th>Rate 2</th>
                                             <th>Best rate</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
                                             <td><b>1 ETH</b></td>
-                                            <td>{this.state.nexchange.btceth} BTC</td>
-                                            <td>{this.state.shapeshift.btceth} BTC {this.priceDiff(this.state.nexchange.btceth, this.state.shapeshift.btceth)}</td>
-                                            <td>{this.state.changelly.btceth} BTC {this.priceDiff(this.state.nexchange.btceth, this.state.changelly.btceth)}</td>
-                                            <td>{this.showBestRate(this.state.shapeshift.btceth, this.state.changelly.btceth, this.state.nexchange.btceth)}</td>
+                                            <td>{this.state.NasdaqExchange.btceth} BTC</td>
+                                            <td>{this.state.shapeshift.btceth} BTC {this.priceDiff(this.state.NasdaqExchange.btceth, this.state.shapeshift.btceth)}</td>
+                                            <td>{this.state.changelly.btceth} BTC {this.priceDiff(this.state.NasdaqExchange.btceth, this.state.changelly.btceth)}</td>
                                         </tr>
 
                                         <tr>
                                             <td><b>1 ETH</b></td>
-                                            <td>{this.state.nexchange.dogeeth} DOGE</td>
-                                            <td>{this.state.shapeshift.dogeeth} DOGE {this.priceDiff(this.state.nexchange.dogeeth, this.state.shapeshift.dogeeth)}</td>
-                                            <td>{this.state.changelly.dogeeth} DOGE {this.priceDiff(this.state.nexchange.dogeeth, this.state.changelly.dogeeth)}</td>
-                                            <td>{this.showBestRate(this.state.shapeshift.dogeeth, this.state.changelly.dogeeth, this.state.nexchange.dogeeth)}</td>
+                                            <td>{this.state.NasdaqExchange.dogeeth} DOGE</td>
+                                            <td>{this.state.shapeshift.dogeeth} DOGE {this.priceDiff(this.state.NasdaqExchange.dogeeth, this.state.shapeshift.dogeeth)}</td>
+                                            <td>{this.state.changelly.dogeeth} DOGE {this.priceDiff(this.state.NasdaqExchange.dogeeth, this.state.changelly.dogeeth)}</td>
                                         </tr>
 
                                         <tr>
                                             <td><b>1 LTC</b></td>
-                                            <td>{this.state.nexchange.btcltc} BTC</td>
-                                            <td>{this.state.shapeshift.btcltc} BTC {this.priceDiff(this.state.nexchange.btcltc, this.state.shapeshift.btcltc)}</td>
-                                            <td>{this.state.changelly.btcltc} BTC {this.priceDiff(this.state.nexchange.btcltc, this.state.changelly.btcltc)}</td>
-                                            <td>{this.showBestRate(this.state.shapeshift.btcltc, this.state.changelly.btcltc, this.state.nexchange.btcltc)}</td>
+                                            <td>{this.state.NasdaqExchange.btcltc} BTC</td>
+                                            <td>{this.state.shapeshift.btcltc} BTC {this.priceDiff(this.state.NasdaqExchange.btcltc, this.state.shapeshift.btcltc)}</td>
+                                            <td>{this.state.changelly.btcltc} BTC {this.priceDiff(this.state.NasdaqExchange.btcltc, this.state.changelly.btcltc)}</td>
                                         </tr>
 
                                         <tr>
                                             <td><b>1 LTC</b></td>
-                                            <td>{this.state.nexchange.ethltc} ETH</td>
-                                            <td>{this.state.shapeshift.ethltc} ETH {this.priceDiff(this.state.nexchange.ethltc, this.state.shapeshift.ethltc)}</td>
-                                            <td>{this.state.changelly.ethltc} ETH {this.priceDiff(this.state.nexchange.ethltc, this.state.changelly.ethltc)}</td>
-                                            <td>{this.showBestRate(this.state.shapeshift.ethltc, this.state.changelly.ethltc, this.state.nexchange.ethltc)}</td>
+                                            <td>{this.state.NasdaqExchange.ethltc} ETH</td>
+                                            <td>{this.state.shapeshift.ethltc} ETH {this.priceDiff(this.state.NasdaqExchange.ethltc, this.state.shapeshift.ethltc)}</td>
+                                            <td>{this.state.changelly.ethltc} ETH {this.priceDiff(this.state.NasdaqExchange.ethltc, this.state.changelly.ethltc)}</td>
                                         </tr>
 
                                         <tr>
                                             <td><b>1 LTC</b></td>
-                                            <td>{this.state.nexchange.dogeltc} DOGE</td>
-                                            <td>{this.state.shapeshift.dogeltc} DOGE {this.priceDiff(this.state.nexchange.dogeltc, this.state.shapeshift.dogeltc)}</td>
-                                            <td>{this.state.changelly.dogeltc} DOGE {this.priceDiff(this.state.nexchange.dogeltc, this.state.changelly.dogeltc)}</td>
-                                            <td>{this.showBestRate(this.state.shapeshift.dogeltc, this.state.changelly.dogeltc, this.state.nexchange.dogeltc)}</td>
+                                            <td>{this.state.NasdaqExchange.dogeltc} DOGE</td>
+                                            <td>{this.state.shapeshift.dogeltc} DOGE {this.priceDiff(this.state.NasdaqExchange.dogeltc, this.state.shapeshift.dogeltc)}</td>
+                                            <td>{this.state.changelly.dogeltc} DOGE {this.priceDiff(this.state.NasdaqExchange.dogeltc, this.state.changelly.dogeltc)}</td>
                                         </tr>
 
                                         <tr>
                                             <td><b>1 BTC</b></td>
-                                            <td>{this.state.nexchange.dogebtc} DOGE</td>
-                                            <td>{this.state.shapeshift.dogebtc} DOGE {this.priceDiff(this.state.nexchange.dogebtc, this.state.shapeshift.dogebtc)}</td>
-                                            <td>{this.state.changelly.dogebtc} DOGE {this.priceDiff(this.state.nexchange.dogebtc, this.state.changelly.dogebtc)}</td>
-                                            <td>{this.showBestRate(this.state.shapeshift.dogebtc, this.state.changelly.dogebtc, this.state.nexchange.dogebtc)}</td>
+                                            <td>{this.state.NasdaqExchange.dogebtc} DOGE</td>
+                                            <td>{this.state.shapeshift.dogebtc} DOGE {this.priceDiff(this.state.NasdaqExchange.dogebtc, this.state.shapeshift.dogebtc)}</td>
+                                            <td>{this.state.changelly.dogebtc} DOGE {this.priceDiff(this.state.NasdaqExchange.dogebtc, this.state.changelly.dogebtc)}</td>
                                         </tr>
                                     </tbody>
                                 </table>

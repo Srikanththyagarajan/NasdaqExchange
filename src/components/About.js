@@ -13,15 +13,15 @@ const About = () => (
           <p>We pride ourselves on total transparency To support our mission of making crypto accessible to everyone, we’ve made our <b><a href="https://github.com/Srikanththyagarajan" target="_blank">front end client completely open source <i className="fa fa-github" aria-hidden="true"></i></a></b>.</p>
 
           <div id="team-members" className="row">
-            <TeamMember id="Srikanth" name="srikanth" country="IN" fullCountryName="India"
-              description="Srikanth Thyagarajan, UI developer, BNC team"
+            <TeamMember id="Srikanth" name="Srikanth Thyagarajan" country="IN" fullCountryName="India"
+              description="UI developer, BNC team"
               social={{
                 linkedin: "https://www.linkedin.com/in/srikanth-thyagarajan-14358a3b/",
                 github: "hhttps://github.com/Srikanththyagarajan",
               }} />
 
-            <TeamMember id="Myank" name="Myank" country="IN" fullCountryName="India"
-              description="Myank Sharma, Java Developer, BNC Team"
+            <TeamMember id="Myank" name="Mayank Sharma" country="IN" fullCountryName="India"
+              description="Java Developer, OMXLink Team"
               social={{
                 linkedin: "https://www.linkedin.com/in/mayank-sharma-46672123/",
               }}/>
